@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Mailing.Core.Models
+namespace Kromes.Core.Models
 {
     public class Book  : BaseEntity
     {

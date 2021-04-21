@@ -1,9 +1,9 @@
 using BookApp.Core.Services;
 using BookApp.Core.Services.Interfaces;
-using Mailing.Core.Context;
-using Mailing.Core.Data;
-using Mailing.Core.Data.Repositories;
-using Mailing.Core.Repositories.Interfaces;
+using Kromes.Core.Context;
+using Kromes.Core.Data;
+using Kromes.Core.Data.Repositories;
+using Kromes.Core.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,7 +19,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Data;
 using System.Text;
 
-namespace Mailing.API
+namespace Kromes.API
 {
     public class Startup
     {

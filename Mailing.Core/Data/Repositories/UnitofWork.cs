@@ -1,13 +1,13 @@
-﻿using Mailing.Core.Context;
-using Mailing.Core.Models;
-using Mailing.Core.Repositories.Interfaces;
+﻿using Kromes.Core.Context;
+using Kromes.Core.Models;
+using Kromes.Core.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Data.Repositories
+namespace Kromes.Core.Data.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {

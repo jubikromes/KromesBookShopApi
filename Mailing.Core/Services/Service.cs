@@ -1,7 +1,7 @@
-﻿using Mailing.Core.Data;
-using Mailing.Core.Models;
-using Mailing.Core.Repositories.Interfaces;
-using Mailing.Core.Services.Interfaces;
+﻿using Kromes.Core.Data;
+using Kromes.Core.Models;
+using Kromes.Core.Repositories.Interfaces;
+using Kromes.Core.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Services
+namespace Kromes.Core.Services
 {
 
     public class Service<TEntity> : IService<TEntity> where TEntity : BaseEntity

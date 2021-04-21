@@ -1,9 +1,9 @@
 ﻿using BookApp.Core.Models;
 using BookApp.Core.Services.Interfaces;
 using BookApp.Core.ViewModels;
-using Mailing.Core.Data;
-using Mailing.Core.Models;
-using Mailing.Core.Services;
+using Kromes.Core.Data;
+using Kromes.Core.Models;
+using Kromes.Core.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using Mailing.Core.Models;
+﻿using Kromes.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Repositories.Interfaces
+namespace Kromes.Core.Repositories.Interfaces
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : BaseEntity
     {

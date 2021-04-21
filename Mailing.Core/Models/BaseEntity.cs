@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mailing.Core.Models
+namespace Kromes.Core.Models
 {
     public class BaseEntity
     {

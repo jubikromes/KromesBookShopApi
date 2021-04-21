@@ -1,4 +1,4 @@
-﻿using Mailing.Core.Models;
+﻿using Kromes.Core.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Context
+namespace Kromes.Core.Context
 {
     public class BookShopDbContext : IdentityDbContext
     {

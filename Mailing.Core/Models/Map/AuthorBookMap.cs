@@ -1,4 +1,4 @@
-﻿using Mailing.Core.Models;
+﻿using Kromes.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

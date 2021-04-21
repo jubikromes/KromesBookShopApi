@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mailing.Core.Models.Map
+namespace Kromes.Core.Models.Map
 {
     public class BookMap : IEntityTypeConfiguration<Book>
     {

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Mailing.Core.Context
+namespace Kromes.Core.Context
 {
 
     public class GigDbContextFactory<T> : IDesignTimeDbContextFactory<T> where T : DbContext

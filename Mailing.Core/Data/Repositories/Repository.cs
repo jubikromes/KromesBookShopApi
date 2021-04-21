@@ -1,6 +1,6 @@
-﻿using Mailing.Core.Context;
-using Mailing.Core.Models;
-using Mailing.Core.Repositories.Interfaces;
+﻿using Kromes.Core.Context;
+using Kromes.Core.Models;
+using Kromes.Core.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Data.Repositories
+namespace Kromes.Core.Data.Repositories
 {
     public class EntityRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
@@ -97,19 +97,6 @@ namespace Mailing.Core.Data.Repositories
 
     
 
-        private IQueryable<TEntity> IncludeStringProperties(string[] includeProperties)
-        {
-            IQueryable<TEntity> entities = null;
-            foreach (var includeProperty in includeProperties)
-            {
-                if (entities == null)
-                    entities = Entities.Include(includeProperty);
-                else
-                    entities = entities.Include(includeProperty);
-            }
-            return entities;
-        }
-
 
         private IQueryable<TEntity> IncludeProperties(params Expression<Func<TEntity, object>>[] includeProperties)
         {
@@ -151,26 +138,12 @@ namespace Mailing.Core.Data.Repositories
             Entities.AddRange(entities);
         }
 
-        //public void InsertOrUpdate(TEntity entity)
-        //{
-        //    dbSet.AddOrUpdate(entity);
-        //}
-
-        /// <summary>
-        /// generic method to get many record on the basis of a condition.
-        /// </summary>
-        /// <param name="where"></param>
-        /// <returns></returns>
         public virtual IEnumerable<TEntity> GetMany(Func<TEntity, bool> where)
         {
             return Entities.Where(where).ToList();
         }
 
-        /// <summary>
-        /// generic method to get many record on the basis of a condition but query able.
-        /// </summary>
-        /// <param name="where"></param>
-        /// <returns></returns>
+       
         public virtual IQueryable<TEntity> GetManyQueryable(Func<TEntity, bool> where)
         {
             return Entities.Where(where).AsQueryable();

@@ -1,11 +1,11 @@
 ﻿using BookApp.Core.Models;
 using BookApp.Core.Services;
 using BookApp.Core.Services.Interfaces;
-using Mailing.Core.Context;
-using Mailing.Core.Data;
-using Mailing.Core.Data.Repositories;
-using Mailing.Core.Models;
-using Mailing.Core.Services.Interfaces;
+using Kromes.Core.Context;
+using Kromes.Core.Data;
+using Kromes.Core.Data.Repositories;
+using Kromes.Core.Models;
+using Kromes.Core.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;

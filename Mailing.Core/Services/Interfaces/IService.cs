@@ -1,5 +1,5 @@
-﻿using Mailing.Core.Data;
-using Mailing.Core.Models;
+﻿using Kromes.Core.Data;
+using Kromes.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mailing.Core.Services.Interfaces
+namespace Kromes.Core.Services.Interfaces
 {
     public interface IService<TEntity> : IDisposable where TEntity : BaseEntity
     {

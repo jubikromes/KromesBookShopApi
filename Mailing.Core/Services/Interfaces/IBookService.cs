@@ -1,6 +1,6 @@
 ﻿using BookApp.Core.ViewModels;
-using Mailing.Core.Models;
-using Mailing.Core.Services.Interfaces;
+using Kromes.Core.Models;
+using Kromes.Core.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

@@ -1,5 +1,5 @@
 ﻿using BookApp.Core.ViewModels;
-using Mailing.Core.ViewModels;
+using Kromes.Core.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

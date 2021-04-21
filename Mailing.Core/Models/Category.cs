@@ -1,4 +1,4 @@
-﻿using Mailing.Core.Models;
+﻿using Kromes.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
