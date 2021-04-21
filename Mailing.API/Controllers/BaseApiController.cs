@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using Mailing.Core.Enums;
 using Mailing.Core.Utils;
 using Mailing.Core.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -23,14 +22,6 @@ namespace BookApp.API.Controllers
         }
 
       
-
-        //protected UserPrincipal CurrentUser
-        //{
-        //    get
-        //    {
-        //        return new UserPrincipal(User as ClaimsPrincipal);
-        //    }
-        //}
 
 
         protected async Task<ApiResponse<T>> HandleApiOperationAsync

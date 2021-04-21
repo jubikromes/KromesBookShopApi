@@ -1,5 +1,4 @@
-﻿using Mailing.Core.Enums;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +21,7 @@ namespace Mailing.Core.ViewModels
 
 
         public ApiResponse(T data = default, string message = "",
-            int codes = StatusCodes.Status200OK, int? totalCount = 0, params string[] errors)
+            int codes = StatusCodes.Status200OK,  params string[] errors)
         {
             Payload = data;
             Errors = errors.ToList();
