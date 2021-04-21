@@ -72,11 +72,6 @@ namespace Mailing.Core.Data.Repositories
             return Entities.FirstOrDefault(t => t.Id == id);
         }
 
-        public TEntity GetSingleIncluding(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includeProperties)
-        {
-            var entities = IncludeProperties(includeProperties);
-            return entities.SingleOrDefault(filter);
-        }
 
         public Task<List<TEntity>> GetAllAsync()
         {
@@ -88,16 +83,6 @@ namespace Mailing.Core.Data.Repositories
             return await Entities.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<TEntity> GetByIdIncludingAsync(Guid id, params Expression<Func<TEntity, object>>[] includeProperties)
-        {
-            var entities = IncludeProperties(includeProperties);
-            return await entities.FirstOrDefaultAsync(x => x.Id == id);
-        }
-
-        public async Task<List<TEntity>> GetByAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await Entities.Where(predicate).ToListAsync();
-        }
 
         public Task<List<TEntity>> GetAllIncludingAsync(params Expression<Func<TEntity, string>>[] includeProperties)
         {

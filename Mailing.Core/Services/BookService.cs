@@ -272,6 +272,7 @@ namespace BookApp.Core.Services
             }
 
             await UnitOfWork.CommitAsync();
+            responseModel = model;
 
             Response:
             return (results, responseModel);

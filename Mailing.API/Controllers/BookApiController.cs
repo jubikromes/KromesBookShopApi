@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookApp.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class BookApiController : BaseApiController
@@ -33,7 +33,7 @@ namespace BookApp.API.Controllers
                 var (errs, responseModel)= await _bookService.CreateBook(model);
 
                 return new ApiResponse<BookResponseViewModel>
-                (data: errs.Any() ? null : responseModel, message: errs.Any() ? errs.FirstOrDefault().ErrorMessage : "");
+                (data: errs.Any() ? null : responseModel, errors: errs.Any() ? errs.Select(p => p.ErrorMessage).ToArray() : new string[] { });
 
             }).ConfigureAwait(false);
         }
@@ -47,7 +47,7 @@ namespace BookApp.API.Controllers
                 var (errs, responseModel) = await _bookService.UpdateBook(model);
 
                 return new ApiResponse<EditBookViewModel>
-                (data: errs.Any() ? null : responseModel, message: errs.Any() ? errs.FirstOrDefault().ErrorMessage : "");
+                (data: errs.Any() ? null : responseModel, errors: errs.Any() ? errs.Select(p => p.ErrorMessage).ToArray() : new string[] { });
 
             }).ConfigureAwait(false);
         }

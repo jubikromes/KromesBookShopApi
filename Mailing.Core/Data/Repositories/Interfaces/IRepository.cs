@@ -16,13 +16,9 @@ namespace Mailing.Core.Repositories.Interfaces
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             params Expression<Func<TEntity, object>>[] includes);
         TEntity GetSingle(Guid id);
-        TEntity GetSingleIncluding(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includeProperties);
         Task<List<TEntity>> GetAllAsync();
   
-        Task<List<TEntity>> GetAllIncludingAsync(params Expression<Func<TEntity, object>>[] includeProperties);
         Task<TEntity> GetByIdAsync(Guid id);
-        Task<TEntity> GetByIdIncludingAsync(Guid id, params Expression<Func<TEntity, object>>[] includeProperties);
-        Task<List<TEntity>> GetByAsync(Expression<Func<TEntity, bool>> predicate);
 
         Task<int> Count(Expression<Func<TEntity, bool>> predicate);
         /// <summary>
