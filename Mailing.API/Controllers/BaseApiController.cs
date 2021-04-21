@@ -34,7 +34,6 @@ namespace BookApp.API.Controllers
 
             try
             {
-
                 var methodResponse = await action.Invoke();
 
                 apiResponse.ResponseCode = methodResponse.ResponseCode;

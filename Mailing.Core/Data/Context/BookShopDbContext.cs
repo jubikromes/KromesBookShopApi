@@ -37,18 +37,6 @@ namespace Mailing.Core.Context
         {
             _transaction = Database.BeginTransaction();
         }
-        public static string GetFileWithName(string filePath)
-        {
-            var baseDir = $@"{AppDomain.CurrentDomain.BaseDirectory}";
-
-            Debug.WriteLine(baseDir);
-
-            if (Directory.Exists($"{baseDir}\bin"))
-                return $@"{baseDir}\\bin{filePath}";
-            else
-                return $@"{baseDir}\{filePath}";
-        }
-
 
         public new DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
         {
@@ -109,26 +97,10 @@ namespace Mailing.Core.Context
             base.Dispose();
         }
 
-        /// <summary>
-        /// Create database script
-        /// </summary>
-        /// <returns>SQL to generate database</returns>
-        public string CreateDatabaseScript()
-        {
-            return string.Empty;
-        }
-
-        /// <summary>
-        /// Attach an entity to the context or return an already attached entity (if it was already attached)
-        /// </summary>
-        /// <typeparam name="TEntity">TEntity</typeparam>
-        /// <param name="entity">Entity</param>
-        /// <returns>Attached entity</returns>
+        
         protected virtual TEntity AttachEntityToContext<TEntity>(TEntity entity) where TEntity : BaseEntity, new()
         {
-            //little hack here until Entity Framework really supports stored procedures
-            //otherwise, navigation properties of loaded entities are not loaded until an entity is attached to the context
-            var alreadyAttached = Set<TEntity>().Local.FirstOrDefault(x => x.Id == entity.Id);
+          var alreadyAttached = Set<TEntity>().Local.FirstOrDefault(x => x.Id == entity.Id);
             if (alreadyAttached == null)
             {
                 //attach new entity
@@ -141,7 +113,6 @@ namespace Mailing.Core.Context
                 return alreadyAttached;
             }
         }
-
 
         async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
