@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kromes.BookShop", "Kromes.BookShop", "{1EFDC4DF-B09E-438E-8719-AF030EBE54CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.API", "Mailing.API\BookApp.API.csproj", "{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp.Core", "Mailing.Core\BookApp.Core.csproj", "{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApp.Tests", "BookApp.Tests\BookApp.Tests.csproj", "{6F94A016-1661-4666-82CB-AAA7C8310476}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F94A016-1661-4666-82CB-AAA7C8310476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F94A016-1661-4666-82CB-AAA7C8310476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F94A016-1661-4666-82CB-AAA7C8310476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F94A016-1661-4666-82CB-AAA7C8310476}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FB5910D-A1E0-45F2-BBCE-341B92F0F1F5} = {1EFDC4DF-B09E-438E-8719-AF030EBE54CC}
+		{53CC19D2-9E0F-41D5-AA58-8DD03EF5BB4E} = {1EFDC4DF-B09E-438E-8719-AF030EBE54CC}
+		{6F94A016-1661-4666-82CB-AAA7C8310476} = {1EFDC4DF-B09E-438E-8719-AF030EBE54CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9703477-10A5-4215-85D6-036700E53F33}
+	EndGlobalSection
+EndGlobal
