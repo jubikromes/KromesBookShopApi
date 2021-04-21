@@ -33,9 +33,6 @@ namespace BookApp.Tests.Setup
 
             Context.Database.EnsureCreated();
 
-            //Context.AddRange(new List<Author> { new Author { FirstName = "Oldberg", LastName = "James", Id = Guid.NewGuid() } });
-
-            //Context.AddRange(new List<Category> { new Category { Title = "CIA Chimp" } });
 
         }
 
