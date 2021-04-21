@@ -11,8 +11,6 @@ namespace Mailing.Core.Services.Interfaces
 {
     public interface IService<TEntity> : IDisposable where TEntity : BaseEntity
     {
-        TEntity SingleOrDefault(Func<TEntity, bool> predicate);
-        TEntity SingleOrDefault();
         TEntity FirstOrDefault();
         TEntity FirstOrDefault(Func<TEntity, bool> predicate);
         Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate);
@@ -26,7 +24,6 @@ namespace Mailing.Core.Services.Interfaces
         Task<List<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(Guid id);
         Task<Int32> AddAsync(TEntity entity);
-        Task<Int32> AddRangeAsync(IEnumerable<TEntity> entities);
         Task<Int32> UpdateAsync(TEntity entity);
         Task<Int32> DeleteAsync(TEntity entity);
     }

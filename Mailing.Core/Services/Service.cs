@@ -33,16 +33,7 @@ namespace Mailing.Core.Services
             return Validator.TryValidateObject(entity, new ValidationContext(entity, null, null),
               results, false);
         }
-
-        public TEntity SingleOrDefault(Func<TEntity, bool> predicate)
-        {
-            return _repository.GetAll().SingleOrDefault(predicate);
-        }
-
-        public TEntity SingleOrDefault()
-        {
-            return _repository.GetAll().SingleOrDefault();
-        }
+      
 
         public TEntity FirstOrDefault(Func<TEntity, bool> predicate)
         {
@@ -60,13 +51,6 @@ namespace Mailing.Core.Services
         {
             return _repository.GetAll();
         }
-
-       
-       
-       
-
-        
-
         public TEntity GetById(Guid id)
         {
             return _repository.GetSingle(id);
@@ -122,11 +106,7 @@ namespace Mailing.Core.Services
             return await UnitOfWork.SaveChangesAsync();
         }
 
-        public async Task<Int32> AddRangeAsync(IEnumerable<TEntity> entities)
-        {
-            _repository.InsertRange(entities);
-            return await UnitOfWork.SaveChangesAsync();
-        }
+       
 
         public async Task<Int32> UpdateAsync(TEntity entity)
         {
